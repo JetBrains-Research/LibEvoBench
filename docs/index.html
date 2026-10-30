@@ -165,13 +165,12 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Key findings</h2>
-    <div class="content">
+    <div class="tldr">
+      <span class="tldr-label">TL;DR</span>
       <ul>
-        <li><strong>Evolving APIs decay, stable APIs don't.</strong> Accuracy on evolving APIs drops toward recent releases while stable-API accuracy stays flat, in every model family, library and task.</li>
-        <li><strong>Scale lifts the curve but keeps its shape.</strong> Qwen3.5 at 35B, 122B and 397B degrades in near-parallel steps.</li>
-        <li><strong>Naming the version doesn't help.</strong> Adding <code>requires: lib==ver</code> (L1&rarr;L2) gives no measurable gain, while a redacted docstring (L0&rarr;L1) adds 10&ndash;20 points.</li>
-        <li><strong>Confusion more than fabrication.</strong> Most wrong APIs are real symbols from the same library, and 6&ndash;14% of recalled parameters are anachronistic.</li>
+        <li><strong>Even SOTA models lag on version-specific knowledge</strong>: a persistent 5&ndash;10 point gap between stable and evolving APIs that neither scale nor training recency closes.</li>
+        <li><strong>Models don't store the version as a dimension of library knowledge</strong>: giving the target version yields no gain, while giving documentation adds +10&ndash;20 points.</li>
+        <li><strong>Failures are temporal confusion, not fabrication:</strong> models fall back on version-agnostic, high-frequency symbols that hide the gap.</li>
       </ul>
     </div>
     <div class="figure-box">

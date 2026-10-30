@@ -2,8 +2,6 @@
 
 <img src="docs/static/images/banner.png" alt="LibEvoBench: Probing Temporal Knowledge Stratification in Code Generation Models" width="100%">
 
-<h3>Probing Temporal Knowledge Stratification in Code Generation Models</h3>
-
 Daniele Cipollone<sup>1,2</sup> · Sergey Titov<sup>2</sup> · Maliheh Izadi<sup>1</sup> · Egor Bogomolov<sup>2</sup> · Arie van Deursen<sup>1</sup><br>
 <sup>1</sup>Delft University of Technology · <sup>2</sup>JetBrains Research
 
@@ -34,14 +32,13 @@ Code models are trained on code written against many versions of a library at on
 
 <p align="center"><img src="docs/static/images/pipeline.png" alt="Pipeline: mine GitHub repos that pin a version, resolve call sites to versioned APIs, build per-release compatibility matrices, generate the three tasks, classify every error by matrix lookup and rank by SEUS." width="100%"></p>
 
-## Key findings
+## TL;DR
+
+- **Even SOTA models lag on version-specific knowledge**: a persistent 5–10 point gap between stable and evolving APIs that neither scale nor training recency closes.
+- **Models don't store the version as a dimension of library knowledge**: giving the target version yields no gain, while giving documentation adds +10–20 points.
+- **Failures are temporal confusion, not fabrication:** models fall back on version-agnostic, high-frequency symbols that hide the gap.
 
 <p align="center"><img src="docs/static/images/results.png" alt="Dumbbell chart of stable versus evolving API scores for 13 models, ranked by SEUS. Every model scores lower on evolving APIs; the gap ranges from 5.6 to 12.6 points." width="100%"></p>
-
-- **Evolving APIs decay, stable APIs don't.** Accuracy on evolving APIs drops toward recent releases while stable-API accuracy stays flat, in every model family, library and task.
-- **Scale lifts the curve but keeps its shape.** Qwen3.5 at 35B, 122B and 397B degrades in near-parallel steps.
-- **Naming the version doesn't help.** Adding `requires: lib==ver` (L1→L2) gives no measurable gain, while a redacted docstring (L0→L1) adds 10–20 points.
-- **Confusion more than fabrication.** Most wrong APIs are real symbols from the same library, and 6–14% of recalled parameters are anachronistic.
 
 <details>
 <summary><b>Version-decay and prompt-level curves</b></summary>

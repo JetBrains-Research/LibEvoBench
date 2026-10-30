@@ -58,3 +58,12 @@ pre.bibtex { white-space: pre; overflow-x: auto; background: var(--soft); }
 pre.snippet { white-space: pre; overflow-x: auto; background: var(--soft); margin: 1rem 0 1.5rem; }
 .bibtex-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
 .bibtex-head .title { margin-bottom: 0; }
+
+/* TL;DR box (matches the poster) */
+.tldr { position: relative; background: #f8dfc7; border: 2px solid #363636; border-radius: 18px; padding: 2.1rem 1.75rem 1.25rem; margin: 1.5rem 0 2.5rem; }
+.tldr-label { position: absolute; top: -1.05rem; left: 1.75rem; background: #b8301c; color: #fff; font-weight: 700; font-size: 1.35rem; line-height: 1; padding: 0.45rem 1.1rem; border-radius: 10px 10px 4px 4px; letter-spacing: 0.02em; }
+.tldr ul { list-style: none; margin: 0; padding: 0; }
+.tldr li { position: relative; padding-left: 2rem; margin-bottom: 0.75rem; font-size: 1.1rem; line-height: 1.5; color: #2b2b2b; }
+.tldr li:last-child { margin-bottom: 0; }
+.tldr li::before { content: "\27A2"; position: absolute; left: 0; top: 0; color: #2b2b2b; }
+@media (max-width: 600px) { .tldr { padding: 2rem 1rem 1rem; } .tldr li { font-size: 1rem; padding-left: 1.6rem; } }
