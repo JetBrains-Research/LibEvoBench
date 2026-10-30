@@ -1,0 +1,2 @@
+{prompt}{code_str}{dot}<FILL_HERE>
+{suffix}

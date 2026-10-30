@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LibEvoBench</title>
+<meta name="description" content="LibEvoBench: a version-indexed benchmark of API knowledge in code generation models (NeurIPS 2026, Evaluations & Datasets Track).">
+<meta name="keywords" content="LibEvoBench, code generation, LLM, API evolution, library versions, benchmark, NeurIPS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LibEvoBench: Probing Temporal Knowledge Stratification in Code Generation Models">
+<meta property="og:description" content="Do code models know an API as it exists in a specific library version? A benchmark across 29 releases of PyTorch, NumPy and SciPy. NeurIPS 2026.">
+<meta property="og:image" content="static/images/overview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23363636' stroke-width='2'%3E%3Cpath d='M4 20V10M10 20V4M16 20v-7M22 20H2'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Castoro&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LibEvoBench: Probing Temporal Knowledge Stratification in Code Generation Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Daniele Cipollone<sup>1,2</sup>,</span>
+            <span class="author-block">Sergey Titov<sup>2</sup>,</span>
+            <span class="author-block">Maliheh Izadi<sup>1</sup>,</span>
+            <span class="author-block">Egor Bogomolov<sup>2</sup>,</span>
+            <span class="author-block">Arie van Deursen<sup>1</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Delft University of Technology,</span>
+            <span class="author-block"><sup>2</sup>JetBrains Research</span>
+          </div>
+          <div class="is-size-5 publication-venue" style="margin: 0.75rem auto 0">NeurIPS 2026 &middot; Evaluations &amp; Datasets Track</div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://neurips.cc/virtual/2026/poster/139459" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6v20h12V6z"/><path d="M14 2v4h4M9 13h6M9 17h6"/></svg></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2606.25402" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4l14 16M19 4L5 20"/></svg></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/JetBrains-Research/LibEvoBench" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://doi.org/10.5281/zenodo.20066456" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark" title="Archived code and data on Zenodo">
+                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18v13H3zM3 7l2-3h14l2 3M10 11h4"/></svg></span>
+                  <span>Zenodo</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/JetBrains/LibEvoBench" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#leaderboard" class="button is-normal is-rounded is-dark">
+                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+                  <span>Leaderboard</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="figure-box">
+        <img src="static/images/overview.png" alt="Overview of the three tasks: API Calling completes a real call site, API Identification names an API from a redacted description, Signature Recall writes a versioned signature. Below, the four API Calling prompt levels L0 to L3." class="figure-img">
+      </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem">
+        <strong>LibEvoBench</strong> tests whether code models know an API <em>as it exists in a specific library version</em>, across 29 releases of PyTorch, NumPy and SciPy.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Large software projects often depend on older versions of libraries, even as APIs continue to evolve across releases. This creates a challenge for LLMs: they must maintain knowledge of multiple API versions, not merely the latest or most common one. However, current LLMs are trained on temporally mixed corpora and lack explicit mechanisms for such version-specific reasoning, leading to anachronistic errors: calling APIs as they exist in a different library version.</p>
+          <p>To systematically evaluate this phenomenon, we introduce LibEvoBench, a multi-task benchmark spanning multiple versions of widely used Python libraries, along with a new metric, the Software Evolution Understanding Score (SEUS), to measure models&rsquo; consistency when working with evolving APIs. Our results show that state-of-the-art models are largely version-oblivious: performance degrades for evolving APIs, while for stable APIs it remains the same across versions. Moreover, simply specifying the target version provides no benefit, while relevant documentation significantly boosts models&rsquo; accuracy. These findings highlight a systematic limitation of current training paradigms and motivate new approaches for temporally grounded knowledge in code generation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="leaderboard">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Leaderboard</h2>
+    <p class="has-text-centered" style="margin-bottom: 1.25rem">13 models, evaluated by the authors at zero temperature with no thinking budget.</p>
+    <div class="tabs is-centered is-boxed"><ul id="lb-tabs"></ul></div>
+    <div class="lb-controls">
+      <div class="field" id="lb-lib-field">
+        <label class="label" for="lb-lib">Library</label>
+        <div class="select is-small"><select id="lb-lib">
+          <option value="all">All libraries</option><option value="pytorch">PyTorch</option><option value="numpy">NumPy</option><option value="scipy">SciPy</option>
+        </select></div>
+      </div>
+      <div class="field" id="lb-err-field">
+        <label class="label" for="lb-err">Task</label>
+        <div class="select is-small"><select id="lb-err"></select></div>
+      </div>
+      <div class="field">
+        <label class="label" for="lb-who">Models</label>
+        <div class="select is-small"><select id="lb-who">
+          <option value="all">All</option><option value="closed">Proprietary</option><option value="open">Open weights</option>
+        </select></div>
+      </div>
+    </div>
+    <div class="table-container">
+      <table class="table is-striped is-hoverable is-fullwidth leaderboard" id="lb-table"></table>
+    </div>
+    <p class="lb-note" id="lb-note">Loading the leaderboard&hellip;</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">The benchmark</h2>
+    <div class="content has-text-justified">
+      <p>For every tracked release, the public API surface is rebuilt from the official Sphinx inventory and from runtime introspection, and an API counts as present only when both agree. The resulting compatibility matrices split APIs into <strong>stable</strong> ones, whose signature never changes, and <strong>evolving</strong> ones, which are added, removed or modified within the covered releases.</p>
+    </div>
+    <div class="table-container">
+      <table class="table is-fullwidth is-narrow" style="font-variant-numeric: tabular-nums">
+        <thead><tr><th>Library</th><th class="has-text-right">Versions</th><th class="has-text-right">API-C</th><th class="has-text-right">API-I</th><th class="has-text-right">SR</th></tr></thead>
+        <tbody>
+          <tr><td>PyTorch</td><td class="has-text-right">10</td><td class="has-text-right">16,444</td><td class="has-text-right">17,036</td><td class="has-text-right">25,656</td></tr>
+          <tr><td>NumPy</td><td class="has-text-right">10</td><td class="has-text-right">9,275</td><td class="has-text-right">9,385</td><td class="has-text-right">11,386</td></tr>
+          <tr><td>SciPy</td><td class="has-text-right">9</td><td class="has-text-right">3,948</td><td class="has-text-right">13,244</td><td class="has-text-right">18,052</td></tr>
+          <tr><th>Total</th><th class="has-text-right">29</th><th class="has-text-right">29,667</th><th class="has-text-right">39,665</th><th class="has-text-right">55,094</th></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="content has-text-justified">
+      <p>Every wrong answer is classified by matrix lookup, with no manual coding: <strong>invalid</strong> (a real symbol at that version, but the wrong one), <strong>anachronistic</strong> (exists in another release, not the requested one) or <strong>unknown</strong> (never existed in any tracked release). Models are ranked by the <strong>Software Evolution Understanding Score (SEUS)</strong>, which averages the harmonic mean of stable and evolving scores and subtracts a stability penalty and an anachronism penalty.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Key findings</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Evolving APIs decay, stable APIs don't.</strong> Accuracy on evolving APIs drops toward recent releases while stable-API accuracy stays flat, in every model family, library and task.</li>
+        <li><strong>Scale lifts the curve but keeps its shape.</strong> Qwen3.5 at 35B, 122B and 397B degrades in near-parallel steps.</li>
+        <li><strong>Naming the version doesn't help.</strong> Adding <code>requires: lib==ver</code> (L1&rarr;L2) gives no measurable gain, while a redacted docstring (L0&rarr;L1) adds 10&ndash;20 points.</li>
+        <li><strong>Confusion more than fabrication.</strong> Most wrong APIs are real symbols from the same library, and 6&ndash;14% of recalled parameters are anachronistic.</li>
+      </ul>
+    </div>
+    <div class="figure-box">
+      <img src="static/images/version-decay.png" alt="Three line charts (OpenAI GPT, Sonnet and Gemini, Qwen) of mean score against normalized library version. Dashed stable-API lines stay flat; solid evolving-API lines fall toward the latest versions." class="figure-img">
+    </div>
+    <p class="has-text-centered is-size-6" style="margin: 0.5rem 0 2rem">Mean score across API-C@L1, API-I and SR over normalized library version. Stable APIs dashed, evolving APIs solid.</p>
+    <div class="figure-box">
+      <img src="static/images/prompt-levels.png" alt="Three line charts of API Calling exact match across prompt levels L0 to L3. Scores rise from L0 to L1, stay flat from L1 to L2, and rise again at L3." class="figure-img">
+    </div>
+    <p class="has-text-centered is-size-6" style="margin-top: 0.5rem">API Calling accuracy by prompt level. The docstring drives the L0&rarr;L1 gain; the version constraint at L2 adds nothing.</p>
+  </div>
+</section>
+
+<section class="section" id="get-started">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Get started</h2>
+    <div class="content has-text-justified">
+      <p>The benchmark is on <a href="https://huggingface.co/datasets/JetBrains/LibEvoBench" target="_blank" rel="noopener">Hugging Face</a>, one configuration per library and table. Configuration names follow <code>&lt;library&gt;__&lt;table&gt;</code>, with library <code>torch</code>, <code>numpy</code> or <code>scipy</code>.</p>
+    </div>
+    <div class="table-container">
+      <table class="table is-fullwidth is-narrow">
+        <thead><tr><th>Table</th><th>Contents</th></tr></thead>
+        <tbody>
+          <tr><td><code>benchmark_t1</code></td><td>API Calling (API-C) instances, prompt levels L0&ndash;L3</td></tr>
+          <tr><td><code>benchmark_t2</code></td><td>API Identification (API-I) instances</td></tr>
+          <tr><td><code>benchmark_t3</code></td><td>Signature Recall (SR) instances</td></tr>
+          <tr><td><code>api_comp_matrix</code></td><td>Which APIs exist in which release</td></tr>
+          <tr><td><code>sign_comp_matrix</code></td><td>The signature of each API in each release</td></tr>
+          <tr><td><code>api_dictionary</code></td><td>The tracked APIs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <pre class="snippet"><code>from datasets import load_dataset
+
+# API Calling instances for PyTorch
+ds = load_dataset("JetBrains/LibEvoBench", "torch__benchmark_t1", split="train")</code></pre>
+    <div class="content has-text-justified">
+      <p>The <a href="https://github.com/JetBrains-Research/LibEvoBench" target="_blank" rel="noopener">code repository</a> has the pipeline that builds the matrices and tasks, the evaluation scripts, and the model outputs behind the results in the paper.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-head"><h2 class="title">BibTeX</h2><button class="button is-small is-rounded" id="copy-bibtex" type="button">Copy</button></div>
+    <pre class="bibtex"><code>@inproceedings{cipollone2026libevobench,
+  title     = {{LibEvoBench}: Probing Temporal Knowledge Stratification
+               in Code Generation Models},
+  author    = {Cipollone, Daniele and Titov, Sergey and Izadi, Maliheh
+               and Bogomolov, Egor and van Deursen, Arie},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>Page layout adapted from the <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page template, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/leaderboard.js"></script>
+<script>
+  document.getElementById("copy-bibtex").addEventListener("click", function () {
+    var btn = this, text = document.querySelector("pre.bibtex code").textContent;
+    navigator.clipboard.writeText(text).then(function () {
+      btn.textContent = "Copied";
+      setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+    });
+  });
+</script>
+
+<!-- Privacy-friendly, cookie-free visit counter: https://libevobench.goatcounter.com -->
+<script data-goatcounter="https://libevobench.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

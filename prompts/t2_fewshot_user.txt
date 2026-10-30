@@ -1,0 +1,4 @@
+torch library, version 2.6.
+API path: torch.nn.___
+Description:
+During training, randomly zeroes some of the elements of the input tensor with probability p. The zeroed elements are chosen independently for each forward call and are sampled from a Bernoulli distribution.

@@ -1,0 +1,5 @@
+# requires: {lib}=={ver}
+# Documentation 
+# {docstring_redacted}
+{prompt}{code_str}{dot}<FILL_HERE>
+{suffix}

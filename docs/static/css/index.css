@@ -1,0 +1,60 @@
+/* LibEvoBench project page. Classic academic project-page layout on top of Bulma 0.9.4. */
+:root {
+  --text: #363636;
+  --muted: #6b6b6b;
+  --line: #e5e5e5;
+  --soft: #f5f5f5;
+  --link: #3273dc;
+  --dark: #363636;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text);
+  background: #ffffff;
+}
+
+.footer .icon-link { font-size: 25px; color: #000; }
+
+.link-block a { margin-top: 5px; margin-bottom: 5px; }
+.link-block .button .icon svg { width: 1.1em; height: 1.1em; }
+
+.publication-title { font-family: "Castoro", serif; }
+.publication-authors { font-family: "Noto Sans", sans-serif; }
+.publication-venue { color: var(--muted); width: fit-content; font-weight: bold; }
+.publication-awards { color: var(--muted); }
+.publication-authors a { color: var(--link) !important; }
+.publication-authors a:hover { text-decoration: underline; }
+.author-block { display: inline-block; }
+
+.hero .hero-body { padding-left: 1rem; padding-right: 1rem; }
+.teaser .hero-body { padding-top: 0; padding-bottom: 3rem; min-width: 0; }
+.teaser .container { min-width: 0; width: 100%; }
+.teaser img, .figure-img { width: 100%; height: auto; display: block; }
+.figure-box { overflow-x: auto; }
+.figure-box img { min-width: 520px; }
+
+
+/* Leaderboard */
+.lb-controls { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; margin-bottom: 1rem; }
+.lb-controls .field { margin-bottom: 0; }
+.lb-controls label.label { font-size: 0.8rem; font-weight: 600; margin-bottom: 0.25rem; color: var(--muted); }
+.table-container { overflow-x: auto; }
+table.leaderboard { width: 100%; font-variant-numeric: tabular-nums; font-size: 0.95rem; }
+table.leaderboard th, table.leaderboard td { text-align: right; white-space: nowrap; vertical-align: middle; }
+table.leaderboard th.has-text-left, table.leaderboard td.has-text-left { text-align: left; }
+table.leaderboard th button { all: unset; cursor: pointer; }
+table.leaderboard th button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+table.leaderboard th[aria-sort="descending"] button::after { content: " \2193"; }
+table.leaderboard th[aria-sort="ascending"] button::after { content: " \2191"; }
+table.leaderboard td.score { font-weight: 700; }
+table.leaderboard .ci { color: var(--muted); font-size: 0.8em; margin-left: 2px; }
+table.leaderboard .org { color: var(--muted); font-size: 0.85em; }
+.tag.is-open { margin-left: 0.4rem; }
+.lb-note { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
+
+pre.bibtex { white-space: pre; overflow-x: auto; background: var(--soft); }
+
+pre.snippet { white-space: pre; overflow-x: auto; background: var(--soft); margin: 1rem 0 1.5rem; }
+.bibtex-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+.bibtex-head .title { margin-bottom: 0; }

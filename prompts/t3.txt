@@ -1,0 +1,1 @@
+Write the full function/method signature of `{api}` as it appears in {lib} {version}. Output ONLY the signature line (e.g. `func(a, b, c=None)`), nothing else.

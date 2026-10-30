@@ -1,0 +1,2177 @@
+{
+ "_source": "LibEvoBench paper: SEUS from Table 7, per-task stable/evolving with 95% bootstrap CI from Table 3, error taxonomy from Tables 5 and 6.",
+ "settings": "zero temperature where supported, no thinking budget",
+ "models": [
+  {
+   "name": "GPT-5.4",
+   "organization": "OpenAI",
+   "open_weights": false,
+   "seus": {
+    "seus": 86.0,
+    "stable": 92.0,
+    "evolving": 86.4,
+    "retention": 94.1,
+    "stability_penalty": 2.0,
+    "anachronism_penalty": 1.0
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 87.2,
+      "stable_ci": 0.8,
+      "evolving": 85.3,
+      "evolving_ci": 2.5
+     },
+     "apii": {
+      "stable": 92.4,
+      "stable_ci": 0.6,
+      "evolving": 86.1,
+      "evolving_ci": 0.8
+     },
+     "sr": {
+      "stable": 94.5,
+      "stable_ci": 0.4,
+      "evolving": 85.8,
+      "evolving_ci": 0.4
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 86.2,
+      "stable_ci": 1.2,
+      "evolving": 80.2,
+      "evolving_ci": 3.0
+     },
+     "apii": {
+      "stable": 91.5,
+      "stable_ci": 0.8,
+      "evolving": 84.9,
+      "evolving_ci": 1.6
+     },
+     "sr": {
+      "stable": 91.8,
+      "stable_ci": 0.7,
+      "evolving": 87.7,
+      "evolving_ci": 0.7
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 93.4,
+      "stable_ci": 1.3,
+      "evolving": 89.0,
+      "evolving_ci": 3.0
+     },
+     "apii": {
+      "stable": 89.7,
+      "stable_ci": 0.9,
+      "evolving": 86.5,
+      "evolving_ci": 1.0
+     },
+     "sr": {
+      "stable": 98.0,
+      "stable_ci": 0.3,
+      "evolving": 81.2,
+      "evolving_ci": 0.6
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 86.4,
+      "correct": 86.4,
+      "invalid": 8.7,
+      "anachronistic": 0.0,
+      "unknown": 4.1
+     },
+     "apii": {
+      "score": 86.1,
+      "correct": 86.1,
+      "invalid": 8.5,
+      "anachronistic": 0.3,
+      "unknown": 5.0
+     },
+     "apic3": {
+      "score": 90.1,
+      "correct": 95.8,
+      "invalid": null,
+      "anachronistic": 1.4,
+      "unknown": 2.8
+     },
+     "sr": {
+      "score": 85.8,
+      "correct": 86.8,
+      "invalid": null,
+      "anachronistic": 6.4,
+      "unknown": 6.8
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 81.5,
+      "correct": 81.5,
+      "invalid": 12.7,
+      "anachronistic": 1.1,
+      "unknown": 4.8
+     },
+     "apii": {
+      "score": 84.9,
+      "correct": 84.9,
+      "invalid": 12.6,
+      "anachronistic": 0.3,
+      "unknown": 2.2
+     },
+     "apic3": {
+      "score": 92.4,
+      "correct": 93.0,
+      "invalid": null,
+      "anachronistic": 2.3,
+      "unknown": 4.8
+     },
+     "sr": {
+      "score": 87.7,
+      "correct": 88.7,
+      "invalid": null,
+      "anachronistic": 5.1,
+      "unknown": 6.2
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 91.1,
+      "correct": 91.1,
+      "invalid": 7.6,
+      "anachronistic": 0.0,
+      "unknown": 0.5
+     },
+     "apii": {
+      "score": 86.5,
+      "correct": 86.5,
+      "invalid": 11.6,
+      "anachronistic": 0.1,
+      "unknown": 1.8
+     },
+     "apic3": {
+      "score": 87.9,
+      "correct": 95.9,
+      "invalid": null,
+      "anachronistic": 2.5,
+      "unknown": 1.6
+     },
+     "sr": {
+      "score": 81.2,
+      "correct": 81.1,
+      "invalid": null,
+      "anachronistic": 3.7,
+      "unknown": 15.2
+     }
+    }
+   }
+  },
+  {
+   "name": "GPT-5.5",
+   "organization": "OpenAI",
+   "open_weights": false,
+   "seus": {
+    "seus": 85.1,
+    "stable": 92.3,
+    "evolving": 86.1,
+    "retention": 93.5,
+    "stability_penalty": 2.7,
+    "anachronism_penalty": 0.9
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 90.4,
+      "stable_ci": 0.8,
+      "evolving": 89.0,
+      "evolving_ci": 2.2
+     },
+     "apii": {
+      "stable": 92.3,
+      "stable_ci": 0.6,
+      "evolving": 84.3,
+      "evolving_ci": 0.9
+     },
+     "sr": {
+      "stable": 95.7,
+      "stable_ci": 0.3,
+      "evolving": 86.1,
+      "evolving_ci": 0.4
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 88.0,
+      "stable_ci": 1.1,
+      "evolving": 83.6,
+      "evolving_ci": 2.9
+     },
+     "apii": {
+      "stable": 92.2,
+      "stable_ci": 0.8,
+      "evolving": 87.2,
+      "evolving_ci": 1.6
+     },
+     "sr": {
+      "stable": 92.5,
+      "stable_ci": 0.7,
+      "evolving": 88.4,
+      "evolving_ci": 0.7
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 95.4,
+      "stable_ci": 1.1,
+      "evolving": 90.1,
+      "evolving_ci": 3.0
+     },
+     "apii": {
+      "stable": 89.3,
+      "stable_ci": 1.0,
+      "evolving": 87.7,
+      "evolving_ci": 0.9
+     },
+     "sr": {
+      "stable": 99.0,
+      "stable_ci": 0.2,
+      "evolving": 80.1,
+      "evolving_ci": 0.6
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 90.4,
+      "correct": 90.4,
+      "invalid": 5.1,
+      "anachronistic": 0.4,
+      "unknown": 3.7
+     },
+     "apii": {
+      "score": 84.3,
+      "correct": 84.3,
+      "invalid": 8.0,
+      "anachronistic": 0.5,
+      "unknown": 6.7
+     },
+     "apic3": {
+      "score": 89.2,
+      "correct": 96.0,
+      "invalid": null,
+      "anachronistic": 1.5,
+      "unknown": 2.5
+     },
+     "sr": {
+      "score": 86.1,
+      "correct": 87.1,
+      "invalid": null,
+      "anachronistic": 6.3,
+      "unknown": 6.5
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 84.5,
+      "correct": 84.5,
+      "invalid": 13.0,
+      "anachronistic": 1.1,
+      "unknown": 1.2
+     },
+     "apii": {
+      "score": 87.2,
+      "correct": 87.2,
+      "invalid": 11.1,
+      "anachronistic": 0.2,
+      "unknown": 1.5
+     },
+     "apic3": {
+      "score": 90.3,
+      "correct": 92.8,
+      "invalid": null,
+      "anachronistic": 2.2,
+      "unknown": 5.0
+     },
+     "sr": {
+      "score": 88.4,
+      "correct": 89.9,
+      "invalid": null,
+      "anachronistic": 4.0,
+      "unknown": 6.1
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 89.8,
+      "correct": 89.8,
+      "invalid": 8.4,
+      "anachronistic": 0.0,
+      "unknown": 0.5
+     },
+     "apii": {
+      "score": 87.7,
+      "correct": 87.7,
+      "invalid": 8.2,
+      "anachronistic": 0.1,
+      "unknown": 3.8
+     },
+     "apic3": {
+      "score": 87.4,
+      "correct": 95.7,
+      "invalid": null,
+      "anachronistic": 1.9,
+      "unknown": 2.4
+     },
+     "sr": {
+      "score": 80.1,
+      "correct": 79.3,
+      "invalid": null,
+      "anachronistic": 4.5,
+      "unknown": 16.2
+     }
+    }
+   }
+  },
+  {
+   "name": "Claude Sonnet 4.6",
+   "organization": "Anthropic",
+   "open_weights": false,
+   "seus": {
+    "seus": 81.0,
+    "stable": 89.3,
+    "evolving": 82.4,
+    "retention": 92.4,
+    "stability_penalty": 3.4,
+    "anachronism_penalty": 1.0
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 81.9,
+      "stable_ci": 1.0,
+      "evolving": 77.2,
+      "evolving_ci": 2.9
+     },
+     "apii": {
+      "stable": 90.7,
+      "stable_ci": 0.7,
+      "evolving": 79.8,
+      "evolving_ci": 1.0
+     },
+     "sr": {
+      "stable": 94.8,
+      "stable_ci": 0.4,
+      "evolving": 84.4,
+      "evolving_ci": 0.4
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 79.8,
+      "stable_ci": 1.3,
+      "evolving": 78.7,
+      "evolving_ci": 3.1
+     },
+     "apii": {
+      "stable": 90.0,
+      "stable_ci": 0.8,
+      "evolving": 85.8,
+      "evolving_ci": 1.7
+     },
+     "sr": {
+      "stable": 92.3,
+      "stable_ci": 0.7,
+      "evolving": 87.1,
+      "evolving_ci": 0.7
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 84.9,
+      "stable_ci": 1.8,
+      "evolving": 82.2,
+      "evolving_ci": 3.8
+     },
+     "apii": {
+      "stable": 84.4,
+      "stable_ci": 1.1,
+      "evolving": 83.8,
+      "evolving_ci": 1.0
+     },
+     "sr": {
+      "stable": 97.9,
+      "stable_ci": 0.3,
+      "evolving": 79.5,
+      "evolving_ci": 0.6
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 77.1,
+      "correct": 77.1,
+      "invalid": 7.9,
+      "anachronistic": 0.1,
+      "unknown": 11.8
+     },
+     "apii": {
+      "score": 79.8,
+      "correct": 79.8,
+      "invalid": 9.9,
+      "anachronistic": 0.5,
+      "unknown": 9.7
+     },
+     "apic3": {
+      "score": 89.6,
+      "correct": 96.7,
+      "invalid": null,
+      "anachronistic": 0.6,
+      "unknown": 2.7
+     },
+     "sr": {
+      "score": 84.4,
+      "correct": 85.3,
+      "invalid": null,
+      "anachronistic": 6.8,
+      "unknown": 7.9
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 78.8,
+      "correct": 78.8,
+      "invalid": 13.1,
+      "anachronistic": 0.9,
+      "unknown": 5.1
+     },
+     "apii": {
+      "score": 85.8,
+      "correct": 85.8,
+      "invalid": 12.9,
+      "anachronistic": 0.1,
+      "unknown": 1.3
+     },
+     "apic3": {
+      "score": 92.2,
+      "correct": 93.1,
+      "invalid": null,
+      "anachronistic": 2.2,
+      "unknown": 4.8
+     },
+     "sr": {
+      "score": 87.1,
+      "correct": 89.4,
+      "invalid": null,
+      "anachronistic": 4.6,
+      "unknown": 6.0
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 79.1,
+      "correct": 79.1,
+      "invalid": 8.6,
+      "anachronistic": 0.0,
+      "unknown": 5.0
+     },
+     "apii": {
+      "score": 83.8,
+      "correct": 83.8,
+      "invalid": 10.6,
+      "anachronistic": 0.2,
+      "unknown": 5.5
+     },
+     "apic3": {
+      "score": 86.3,
+      "correct": 94.7,
+      "invalid": null,
+      "anachronistic": 2.5,
+      "unknown": 2.9
+     },
+     "sr": {
+      "score": 79.5,
+      "correct": 78.3,
+      "invalid": null,
+      "anachronistic": 5.6,
+      "unknown": 16.0
+     }
+    }
+   }
+  },
+  {
+   "name": "Claude Sonnet 4",
+   "organization": "Anthropic",
+   "open_weights": false,
+   "seus": {
+    "seus": 77.6,
+    "stable": 87.8,
+    "evolving": 78.5,
+    "retention": 89.6,
+    "stability_penalty": 3.7,
+    "anachronism_penalty": 1.1
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 83.1,
+      "stable_ci": 1.0,
+      "evolving": 74.2,
+      "evolving_ci": 3.1
+     },
+     "apii": {
+      "stable": 88.3,
+      "stable_ci": 0.8,
+      "evolving": 73.5,
+      "evolving_ci": 1.1
+     },
+     "sr": {
+      "stable": 92.1,
+      "stable_ci": 0.5,
+      "evolving": 75.1,
+      "evolving_ci": 0.6
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 80.8,
+      "stable_ci": 1.3,
+      "evolving": 77.1,
+      "evolving_ci": 3.2
+     },
+     "apii": {
+      "stable": 86.5,
+      "stable_ci": 0.9,
+      "evolving": 79.4,
+      "evolving_ci": 2.0
+     },
+     "sr": {
+      "stable": 90.8,
+      "stable_ci": 0.7,
+      "evolving": 86.2,
+      "evolving_ci": 0.7
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 90.4,
+      "stable_ci": 1.5,
+      "evolving": 84.3,
+      "evolving_ci": 3.7
+     },
+     "apii": {
+      "stable": 80.0,
+      "stable_ci": 1.2,
+      "evolving": 75.3,
+      "evolving_ci": 1.2
+     },
+     "sr": {
+      "stable": 95.7,
+      "stable_ci": 0.4,
+      "evolving": 73.8,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 76.3,
+      "correct": 76.3,
+      "invalid": 15.3,
+      "anachronistic": 0.0,
+      "unknown": 7.7
+     },
+     "apii": {
+      "score": 73.5,
+      "correct": 73.5,
+      "invalid": 10.9,
+      "anachronistic": 0.3,
+      "unknown": 14.9
+     },
+     "apic3": {
+      "score": 84.4,
+      "correct": 96.1,
+      "invalid": null,
+      "anachronistic": 0.9,
+      "unknown": 3.0
+     },
+     "sr": {
+      "score": 75.1,
+      "correct": 75.4,
+      "invalid": null,
+      "anachronistic": 9.1,
+      "unknown": 15.5
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 76.8,
+      "correct": 76.8,
+      "invalid": 17.5,
+      "anachronistic": 1.2,
+      "unknown": 4.5
+     },
+     "apii": {
+      "score": 79.4,
+      "correct": 79.4,
+      "invalid": 14.9,
+      "anachronistic": 0.4,
+      "unknown": 5.3
+     },
+     "apic3": {
+      "score": 90.5,
+      "correct": 92.8,
+      "invalid": null,
+      "anachronistic": 2.4,
+      "unknown": 4.9
+     },
+     "sr": {
+      "score": 86.2,
+      "correct": 89.5,
+      "invalid": null,
+      "anachronistic": 4.5,
+      "unknown": 6.0
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 84.3,
+      "correct": 84.3,
+      "invalid": 9.4,
+      "anachronistic": 0.0,
+      "unknown": 3.4
+     },
+     "apii": {
+      "score": 75.3,
+      "correct": 75.3,
+      "invalid": 14.7,
+      "anachronistic": 0.2,
+      "unknown": 9.6
+     },
+     "apic3": {
+      "score": 82.7,
+      "correct": 95.7,
+      "invalid": null,
+      "anachronistic": 2.3,
+      "unknown": 2.0
+     },
+     "sr": {
+      "score": 73.8,
+      "correct": 72.8,
+      "invalid": null,
+      "anachronistic": 6.1,
+      "unknown": 21.1
+     }
+    }
+   }
+  },
+  {
+   "name": "Gemini 3 Flash",
+   "organization": "Google",
+   "open_weights": false,
+   "seus": {
+    "seus": 77.3,
+    "stable": 87.8,
+    "evolving": 78.5,
+    "retention": 89.4,
+    "stability_penalty": 3.9,
+    "anachronism_penalty": 1.2
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 84.8,
+      "stable_ci": 0.9,
+      "evolving": 75.2,
+      "evolving_ci": 3.0
+     },
+     "apii": {
+      "stable": 83.4,
+      "stable_ci": 0.9,
+      "evolving": 63.7,
+      "evolving_ci": 1.2
+     },
+     "sr": {
+      "stable": 93.2,
+      "stable_ci": 0.4,
+      "evolving": 76.1,
+      "evolving_ci": 0.5
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 83.2,
+      "stable_ci": 1.3,
+      "evolving": 81.3,
+      "evolving_ci": 3.0
+     },
+     "apii": {
+      "stable": 83.0,
+      "stable_ci": 1.1,
+      "evolving": 78.5,
+      "evolving_ci": 2.0
+     },
+     "sr": {
+      "stable": 90.6,
+      "stable_ci": 0.7,
+      "evolving": 87.6,
+      "evolving_ci": 0.7
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 91.6,
+      "stable_ci": 1.4,
+      "evolving": 86.4,
+      "evolving_ci": 3.4
+     },
+     "apii": {
+      "stable": 77.3,
+      "stable_ci": 1.3,
+      "evolving": 67.8,
+      "evolving_ci": 1.3
+     },
+     "sr": {
+      "stable": 96.5,
+      "stable_ci": 0.4,
+      "evolving": 73.8,
+      "evolving_ci": 0.6
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 76.8,
+      "correct": 76.8,
+      "invalid": 10.6,
+      "anachronistic": 0.0,
+      "unknown": 11.3
+     },
+     "apii": {
+      "score": 63.7,
+      "correct": 63.7,
+      "invalid": 7.6,
+      "anachronistic": 0.4,
+      "unknown": 28.1
+     },
+     "apic3": {
+      "score": 86.6,
+      "correct": 95.9,
+      "invalid": null,
+      "anachronistic": 0.7,
+      "unknown": 3.5
+     },
+     "sr": {
+      "score": 76.1,
+      "correct": 76.3,
+      "invalid": null,
+      "anachronistic": 9.5,
+      "unknown": 14.1
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 81.5,
+      "correct": 81.5,
+      "invalid": 11.6,
+      "anachronistic": 0.9,
+      "unknown": 6.0
+     },
+     "apii": {
+      "score": 78.5,
+      "correct": 78.5,
+      "invalid": 13.0,
+      "anachronistic": 0.1,
+      "unknown": 8.1
+     },
+     "apic3": {
+      "score": 89.6,
+      "correct": 92.8,
+      "invalid": null,
+      "anachronistic": 2.3,
+      "unknown": 4.8
+     },
+     "sr": {
+      "score": 87.6,
+      "correct": 88.7,
+      "invalid": null,
+      "anachronistic": 5.4,
+      "unknown": 6.0
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 87.4,
+      "correct": 87.4,
+      "invalid": 8.9,
+      "anachronistic": 0.0,
+      "unknown": 1.6
+     },
+     "apii": {
+      "score": 67.8,
+      "correct": 67.8,
+      "invalid": 12.3,
+      "anachronistic": 0.2,
+      "unknown": 19.5
+     },
+     "apic3": {
+      "score": 87.5,
+      "correct": 95.4,
+      "invalid": null,
+      "anachronistic": 2.5,
+      "unknown": 2.1
+     },
+     "sr": {
+      "score": 73.8,
+      "correct": 72.9,
+      "invalid": null,
+      "anachronistic": 6.4,
+      "unknown": 20.7
+     }
+    }
+   }
+  },
+  {
+   "name": "GPT-5.1",
+   "organization": "OpenAI",
+   "open_weights": false,
+   "seus": {
+    "seus": 70.7,
+    "stable": 83.8,
+    "evolving": 71.6,
+    "retention": 85.3,
+    "stability_penalty": 4.2,
+    "anachronism_penalty": 1.5
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 76.3,
+      "stable_ci": 1.1,
+      "evolving": 66.6,
+      "evolving_ci": 3.4
+     },
+     "apii": {
+      "stable": 83.6,
+      "stable_ci": 0.9,
+      "evolving": 54.8,
+      "evolving_ci": 1.2
+     },
+     "sr": {
+      "stable": 83.9,
+      "stable_ci": 0.6,
+      "evolving": 63.0,
+      "evolving_ci": 0.6
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 74.4,
+      "stable_ci": 1.4,
+      "evolving": 71.6,
+      "evolving_ci": 3.5
+     },
+     "apii": {
+      "stable": 81.9,
+      "stable_ci": 1.1,
+      "evolving": 72.2,
+      "evolving_ci": 2.2
+     },
+     "sr": {
+      "stable": 85.3,
+      "stable_ci": 0.8,
+      "evolving": 80.6,
+      "evolving_ci": 0.8
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 88.1,
+      "stable_ci": 1.7,
+      "evolving": 79.8,
+      "evolving_ci": 4.1
+     },
+     "apii": {
+      "stable": 78.1,
+      "stable_ci": 1.3,
+      "evolving": 66.3,
+      "evolving_ci": 1.4
+     },
+     "sr": {
+      "stable": 84.7,
+      "stable_ci": 0.7,
+      "evolving": 61.9,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 67.8,
+      "correct": 67.8,
+      "invalid": 15.1,
+      "anachronistic": 0.5,
+      "unknown": 15.9
+     },
+     "apii": {
+      "score": 54.8,
+      "correct": 54.8,
+      "invalid": 10.0,
+      "anachronistic": 0.4,
+      "unknown": 34.2
+     },
+     "apic3": {
+      "score": 83.1,
+      "correct": 95.6,
+      "invalid": null,
+      "anachronistic": 0.8,
+      "unknown": 3.5
+     },
+     "sr": {
+      "score": 63.0,
+      "correct": 61.5,
+      "invalid": null,
+      "anachronistic": 12.2,
+      "unknown": 26.3
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 72.3,
+      "correct": 72.3,
+      "invalid": 21.3,
+      "anachronistic": 1.1,
+      "unknown": 5.3
+     },
+     "apii": {
+      "score": 72.2,
+      "correct": 72.2,
+      "invalid": 18.2,
+      "anachronistic": 0.5,
+      "unknown": 9.1
+     },
+     "apic3": {
+      "score": 86.4,
+      "correct": 91.7,
+      "invalid": null,
+      "anachronistic": 2.3,
+      "unknown": 6.0
+     },
+     "sr": {
+      "score": 80.6,
+      "correct": 83.9,
+      "invalid": null,
+      "anachronistic": 6.4,
+      "unknown": 9.7
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 77.7,
+      "correct": 77.7,
+      "invalid": 13.6,
+      "anachronistic": 0.3,
+      "unknown": 6.0
+     },
+     "apii": {
+      "score": 66.3,
+      "correct": 66.3,
+      "invalid": 12.8,
+      "anachronistic": 0.3,
+      "unknown": 20.3
+     },
+     "apic3": {
+      "score": 83.7,
+      "correct": 95.3,
+      "invalid": null,
+      "anachronistic": 1.7,
+      "unknown": 3.0
+     },
+     "sr": {
+      "score": 61.9,
+      "correct": 59.9,
+      "invalid": null,
+      "anachronistic": 10.7,
+      "unknown": 29.4
+     }
+    }
+   }
+  },
+  {
+   "name": "GPT-4.1",
+   "organization": "OpenAI",
+   "open_weights": false,
+   "seus": {
+    "seus": 70.6,
+    "stable": 84.3,
+    "evolving": 71.7,
+    "retention": 85.0,
+    "stability_penalty": 4.5,
+    "anachronism_penalty": 1.5
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 75.8,
+      "stable_ci": 1.1,
+      "evolving": 61.3,
+      "evolving_ci": 3.3
+     },
+     "apii": {
+      "stable": 85.3,
+      "stable_ci": 0.9,
+      "evolving": 60.0,
+      "evolving_ci": 1.2
+     },
+     "sr": {
+      "stable": 86.8,
+      "stable_ci": 0.6,
+      "evolving": 62.2,
+      "evolving_ci": 0.6
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 75.8,
+      "stable_ci": 1.4,
+      "evolving": 77.0,
+      "evolving_ci": 3.2
+     },
+     "apii": {
+      "stable": 80.9,
+      "stable_ci": 1.1,
+      "evolving": 72.4,
+      "evolving_ci": 2.2
+     },
+     "sr": {
+      "stable": 84.8,
+      "stable_ci": 0.8,
+      "evolving": 78.8,
+      "evolving_ci": 0.9
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 88.9,
+      "stable_ci": 1.6,
+      "evolving": 79.6,
+      "evolving_ci": 4.2
+     },
+     "apii": {
+      "stable": 81.3,
+      "stable_ci": 1.2,
+      "evolving": 66.0,
+      "evolving_ci": 1.3
+     },
+     "sr": {
+      "stable": 85.0,
+      "stable_ci": 0.7,
+      "evolving": 61.9,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 62.9,
+      "correct": 62.9,
+      "invalid": 20.1,
+      "anachronistic": 0.1,
+      "unknown": 15.6
+     },
+     "apii": {
+      "score": 60.0,
+      "correct": 60.0,
+      "invalid": 10.1,
+      "anachronistic": 0.6,
+      "unknown": 29.3
+     },
+     "apic3": {
+      "score": 84.0,
+      "correct": 95.5,
+      "invalid": null,
+      "anachronistic": 0.8,
+      "unknown": 3.7
+     },
+     "sr": {
+      "score": 62.2,
+      "correct": 61.5,
+      "invalid": null,
+      "anachronistic": 11.5,
+      "unknown": 27.0
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 77.1,
+      "correct": 77.1,
+      "invalid": 15.8,
+      "anachronistic": 0.9,
+      "unknown": 6.2
+     },
+     "apii": {
+      "score": 72.4,
+      "correct": 72.4,
+      "invalid": 19.1,
+      "anachronistic": 0.4,
+      "unknown": 8.1
+     },
+     "apic3": {
+      "score": 87.1,
+      "correct": 92.4,
+      "invalid": null,
+      "anachronistic": 2.2,
+      "unknown": 5.4
+     },
+     "sr": {
+      "score": 78.8,
+      "correct": 81.9,
+      "invalid": null,
+      "anachronistic": 6.9,
+      "unknown": 11.2
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 80.6,
+      "correct": 80.6,
+      "invalid": 10.2,
+      "anachronistic": 0.0,
+      "unknown": 7.3
+     },
+     "apii": {
+      "score": 66.0,
+      "correct": 66.0,
+      "invalid": 15.2,
+      "anachronistic": 0.2,
+      "unknown": 18.5
+     },
+     "apic3": {
+      "score": 82.2,
+      "correct": 96.0,
+      "invalid": null,
+      "anachronistic": 1.4,
+      "unknown": 2.5
+     },
+     "sr": {
+      "score": 61.9,
+      "correct": 60.5,
+      "invalid": null,
+      "anachronistic": 10.3,
+      "unknown": 29.2
+     }
+    }
+   }
+  },
+  {
+   "name": "GPT-5",
+   "organization": "OpenAI",
+   "open_weights": false,
+   "seus": {
+    "seus": 70.0,
+    "stable": 83.0,
+    "evolving": 71.5,
+    "retention": 86.0,
+    "stability_penalty": 4.3,
+    "anachronism_penalty": 1.6
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 74.8,
+      "stable_ci": 1.1,
+      "evolving": 66.4,
+      "evolving_ci": 3.3
+     },
+     "apii": {
+      "stable": 81.6,
+      "stable_ci": 1.0,
+      "evolving": 52.7,
+      "evolving_ci": 1.3
+     },
+     "sr": {
+      "stable": 84.4,
+      "stable_ci": 0.6,
+      "evolving": 62.8,
+      "evolving_ci": 0.6
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 74.3,
+      "stable_ci": 1.4,
+      "evolving": 72.8,
+      "evolving_ci": 3.2
+     },
+     "apii": {
+      "stable": 80.6,
+      "stable_ci": 1.1,
+      "evolving": 72.6,
+      "evolving_ci": 2.1
+     },
+     "sr": {
+      "stable": 84.7,
+      "stable_ci": 0.8,
+      "evolving": 79.7,
+      "evolving_ci": 0.8
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 86.1,
+      "stable_ci": 1.7,
+      "evolving": 78.3,
+      "evolving_ci": 4.2
+     },
+     "apii": {
+      "stable": 78.2,
+      "stable_ci": 1.3,
+      "evolving": 65.2,
+      "evolving_ci": 1.4
+     },
+     "sr": {
+      "stable": 83.0,
+      "stable_ci": 0.8,
+      "evolving": 61.2,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 66.7,
+      "correct": 66.7,
+      "invalid": 18.7,
+      "anachronistic": 0.9,
+      "unknown": 13.2
+     },
+     "apii": {
+      "score": 52.7,
+      "correct": 52.7,
+      "invalid": 8.0,
+      "anachronistic": 0.2,
+      "unknown": 38.5
+     },
+     "apic3": {
+      "score": 84.1,
+      "correct": 95.3,
+      "invalid": null,
+      "anachronistic": 1.0,
+      "unknown": 3.7
+     },
+     "sr": {
+      "score": 62.8,
+      "correct": 61.8,
+      "invalid": null,
+      "anachronistic": 11.7,
+      "unknown": 26.5
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 73.4,
+      "correct": 73.4,
+      "invalid": 20.1,
+      "anachronistic": 1.2,
+      "unknown": 5.3
+     },
+     "apii": {
+      "score": 72.6,
+      "correct": 72.6,
+      "invalid": 16.1,
+      "anachronistic": 0.4,
+      "unknown": 10.3
+     },
+     "apic3": {
+      "score": 89.1,
+      "correct": 91.5,
+      "invalid": null,
+      "anachronistic": 2.3,
+      "unknown": 6.2
+     },
+     "sr": {
+      "score": 79.7,
+      "correct": 82.4,
+      "invalid": null,
+      "anachronistic": 7.1,
+      "unknown": 10.4
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 78.8,
+      "correct": 78.8,
+      "invalid": 12.3,
+      "anachronistic": 0.0,
+      "unknown": 6.5
+     },
+     "apii": {
+      "score": 65.2,
+      "correct": 65.2,
+      "invalid": 11.6,
+      "anachronistic": 0.3,
+      "unknown": 22.7
+     },
+     "apic3": {
+      "score": 84.0,
+      "correct": 94.6,
+      "invalid": null,
+      "anachronistic": 1.6,
+      "unknown": 3.7
+     },
+     "sr": {
+      "score": 61.2,
+      "correct": 59.4,
+      "invalid": null,
+      "anachronistic": 10.9,
+      "unknown": 29.7
+     }
+    }
+   }
+  },
+  {
+   "name": "Gemini 2.5 Flash",
+   "organization": "Google",
+   "open_weights": false,
+   "seus": {
+    "seus": 68.9,
+    "stable": 81.6,
+    "evolving": 69.8,
+    "retention": 85.4,
+    "stability_penalty": 4.1,
+    "anachronism_penalty": 1.5
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 76.6,
+      "stable_ci": 1.1,
+      "evolving": 64.4,
+      "evolving_ci": 3.3
+     },
+     "apii": {
+      "stable": 83.0,
+      "stable_ci": 0.9,
+      "evolving": 48.2,
+      "evolving_ci": 1.2
+     },
+     "sr": {
+      "stable": 85.0,
+      "stable_ci": 0.6,
+      "evolving": 60.2,
+      "evolving_ci": 0.6
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 71.9,
+      "stable_ci": 1.5,
+      "evolving": 73.6,
+      "evolving_ci": 3.4
+     },
+     "apii": {
+      "stable": 76.2,
+      "stable_ci": 1.2,
+      "evolving": 68.5,
+      "evolving_ci": 2.2
+     },
+     "sr": {
+      "stable": 85.1,
+      "stable_ci": 0.8,
+      "evolving": 78.1,
+      "evolving_ci": 0.9
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 84.4,
+      "stable_ci": 1.9,
+      "evolving": 77.7,
+      "evolving_ci": 4.3
+     },
+     "apii": {
+      "stable": 72.3,
+      "stable_ci": 1.4,
+      "evolving": 57.9,
+      "evolving_ci": 1.4
+     },
+     "sr": {
+      "stable": 80.6,
+      "stable_ci": 0.8,
+      "evolving": 61.3,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 61.3,
+      "correct": 61.3,
+      "invalid": 17.8,
+      "anachronistic": 0.3,
+      "unknown": 18.9
+     },
+     "apii": {
+      "score": 48.2,
+      "correct": 48.2,
+      "invalid": 13.4,
+      "anachronistic": 0.7,
+      "unknown": 37.5
+     },
+     "apic3": {
+      "score": 85.8,
+      "correct": 94.6,
+      "invalid": null,
+      "anachronistic": 0.6,
+      "unknown": 4.8
+     },
+     "sr": {
+      "score": 60.2,
+      "correct": 58.9,
+      "invalid": null,
+      "anachronistic": 12.0,
+      "unknown": 29.1
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 74.2,
+      "correct": 74.2,
+      "invalid": 21.0,
+      "anachronistic": 0.9,
+      "unknown": 3.7
+     },
+     "apii": {
+      "score": 68.5,
+      "correct": 68.5,
+      "invalid": 20.2,
+      "anachronistic": 0.2,
+      "unknown": 10.9
+     },
+     "apic3": {
+      "score": 90.2,
+      "correct": 92.8,
+      "invalid": null,
+      "anachronistic": 2.2,
+      "unknown": 5.0
+     },
+     "sr": {
+      "score": 78.1,
+      "correct": 80.1,
+      "invalid": null,
+      "anachronistic": 8.2,
+      "unknown": 11.7
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 77.7,
+      "correct": 77.7,
+      "invalid": 12.3,
+      "anachronistic": 0.3,
+      "unknown": 7.1
+     },
+     "apii": {
+      "score": 57.9,
+      "correct": 57.9,
+      "invalid": 19.2,
+      "anachronistic": 0.2,
+      "unknown": 22.6
+     },
+     "apic3": {
+      "score": 81.8,
+      "correct": 94.2,
+      "invalid": null,
+      "anachronistic": 2.2,
+      "unknown": 3.6
+     },
+     "sr": {
+      "score": 61.3,
+      "correct": 60.4,
+      "invalid": null,
+      "anachronistic": 8.4,
+      "unknown": 31.3
+     }
+    }
+   }
+  },
+  {
+   "name": "Qwen3.5 397B",
+   "organization": "Alibaba Qwen",
+   "open_weights": true,
+   "seus": {
+    "seus": 67.9,
+    "stable": 80.2,
+    "evolving": 68.9,
+    "retention": 85.9,
+    "stability_penalty": 3.9,
+    "anachronism_penalty": 1.4
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 70.4,
+      "stable_ci": 1.1,
+      "evolving": 63.7,
+      "evolving_ci": 3.3
+     },
+     "apii": {
+      "stable": 80.2,
+      "stable_ci": 1.0,
+      "evolving": 50.3,
+      "evolving_ci": 1.3
+     },
+     "sr": {
+      "stable": 85.7,
+      "stable_ci": 0.6,
+      "evolving": 62.9,
+      "evolving_ci": 0.6
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 67.8,
+      "stable_ci": 1.6,
+      "evolving": 68.0,
+      "evolving_ci": 3.6
+     },
+     "apii": {
+      "stable": 77.2,
+      "stable_ci": 1.2,
+      "evolving": 72.5,
+      "evolving_ci": 2.2
+     },
+     "sr": {
+      "stable": 84.8,
+      "stable_ci": 0.9,
+      "evolving": 80.3,
+      "evolving_ci": 0.9
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 80.1,
+      "stable_ci": 1.9,
+      "evolving": 73.8,
+      "evolving_ci": 4.7
+     },
+     "apii": {
+      "stable": 75.1,
+      "stable_ci": 1.4,
+      "evolving": 59.8,
+      "evolving_ci": 1.4
+     },
+     "sr": {
+      "stable": 83.2,
+      "stable_ci": 0.8,
+      "evolving": 62.1,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 62.6,
+      "correct": 62.6,
+      "invalid": 17.4,
+      "anachronistic": 0.4,
+      "unknown": 18.3
+     },
+     "apii": {
+      "score": 50.3,
+      "correct": 50.3,
+      "invalid": 15.6,
+      "anachronistic": 0.3,
+      "unknown": 33.8
+     },
+     "apic3": {
+      "score": 85.2,
+      "correct": 95.8,
+      "invalid": null,
+      "anachronistic": 0.6,
+      "unknown": 3.6
+     },
+     "sr": {
+      "score": 62.9,
+      "correct": 62.2,
+      "invalid": null,
+      "anachronistic": 10.8,
+      "unknown": 27.0
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 69.4,
+      "correct": 69.4,
+      "invalid": 20.2,
+      "anachronistic": 1.1,
+      "unknown": 9.3
+     },
+     "apii": {
+      "score": 72.5,
+      "correct": 72.5,
+      "invalid": 19.8,
+      "anachronistic": 0.2,
+      "unknown": 7.4
+     },
+     "apic3": {
+      "score": 88.7,
+      "correct": 91.3,
+      "invalid": null,
+      "anachronistic": 2.4,
+      "unknown": 6.4
+     },
+     "sr": {
+      "score": 80.3,
+      "correct": 82.4,
+      "invalid": null,
+      "anachronistic": 6.7,
+      "unknown": 10.8
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 72.0,
+      "correct": 72.0,
+      "invalid": 15.7,
+      "anachronistic": 0.0,
+      "unknown": 8.4
+     },
+     "apii": {
+      "score": 59.8,
+      "correct": 59.8,
+      "invalid": 22.6,
+      "anachronistic": 0.6,
+      "unknown": 17.0
+     },
+     "apic3": {
+      "score": 81.1,
+      "correct": 93.7,
+      "invalid": null,
+      "anachronistic": 2.1,
+      "unknown": 4.2
+     },
+     "sr": {
+      "score": 62.1,
+      "correct": 60.6,
+      "invalid": null,
+      "anachronistic": 9.1,
+      "unknown": 30.3
+     }
+    }
+   }
+  },
+  {
+   "name": "Gemini 2.0 Flash",
+   "organization": "Google",
+   "open_weights": false,
+   "seus": {
+    "seus": 66.0,
+    "stable": 79.7,
+    "evolving": 67.5,
+    "retention": 84.4,
+    "stability_penalty": 4.5,
+    "anachronism_penalty": 1.5
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 69.9,
+      "stable_ci": 1.1,
+      "evolving": 54.3,
+      "evolving_ci": 3.5
+     },
+     "apii": {
+      "stable": 78.7,
+      "stable_ci": 1.0,
+      "evolving": 38.6,
+      "evolving_ci": 1.2
+     },
+     "sr": {
+      "stable": 81.0,
+      "stable_ci": 0.6,
+      "evolving": 58.1,
+      "evolving_ci": 0.7
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 65.9,
+      "stable_ci": 1.6,
+      "evolving": 72.3,
+      "evolving_ci": 3.5
+     },
+     "apii": {
+      "stable": 77.4,
+      "stable_ci": 1.2,
+      "evolving": 64.7,
+      "evolving_ci": 2.3
+     },
+     "sr": {
+      "stable": 84.3,
+      "stable_ci": 0.8,
+      "evolving": 78.5,
+      "evolving_ci": 0.9
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 82.1,
+      "stable_ci": 1.9,
+      "evolving": 75.9,
+      "evolving_ci": 4.2
+     },
+     "apii": {
+      "stable": 72.0,
+      "stable_ci": 1.4,
+      "evolving": 58.7,
+      "evolving_ci": 1.4
+     },
+     "sr": {
+      "stable": 80.4,
+      "stable_ci": 0.8,
+      "evolving": 56.9,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 56.0,
+      "correct": 56.0,
+      "invalid": 26.3,
+      "anachronistic": 0.1,
+      "unknown": 15.6
+     },
+     "apii": {
+      "score": 38.6,
+      "correct": 38.6,
+      "invalid": 16.3,
+      "anachronistic": 0.2,
+      "unknown": 44.9
+     },
+     "apic3": {
+      "score": 85.1,
+      "correct": 93.8,
+      "invalid": null,
+      "anachronistic": 1.3,
+      "unknown": 5.0
+     },
+     "sr": {
+      "score": 58.1,
+      "correct": 58.2,
+      "invalid": null,
+      "anachronistic": 10.1,
+      "unknown": 31.7
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 73.3,
+      "correct": 73.3,
+      "invalid": 21.8,
+      "anachronistic": 1.1,
+      "unknown": 3.6
+     },
+     "apii": {
+      "score": 64.7,
+      "correct": 64.7,
+      "invalid": 25.2,
+      "anachronistic": 0.2,
+      "unknown": 9.9
+     },
+     "apic3": {
+      "score": 89.4,
+      "correct": 92.4,
+      "invalid": null,
+      "anachronistic": 2.4,
+      "unknown": 5.2
+     },
+     "sr": {
+      "score": 78.5,
+      "correct": 81.6,
+      "invalid": null,
+      "anachronistic": 6.6,
+      "unknown": 11.7
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 77.7,
+      "correct": 77.7,
+      "invalid": 14.1,
+      "anachronistic": 0.0,
+      "unknown": 5.2
+     },
+     "apii": {
+      "score": 58.7,
+      "correct": 58.7,
+      "invalid": 15.1,
+      "anachronistic": 0.2,
+      "unknown": 26.0
+     },
+     "apic3": {
+      "score": 83.1,
+      "correct": 94.8,
+      "invalid": null,
+      "anachronistic": 1.5,
+      "unknown": 3.7
+     },
+     "sr": {
+      "score": 56.9,
+      "correct": 55.4,
+      "invalid": null,
+      "anachronistic": 11.3,
+      "unknown": 33.3
+     }
+    }
+   }
+  },
+  {
+   "name": "Qwen3.5 122B",
+   "organization": "Alibaba Qwen",
+   "open_weights": true,
+   "seus": {
+    "seus": 60.3,
+    "stable": 70.5,
+    "evolving": 62.3,
+    "retention": 87.8,
+    "stability_penalty": 3.5,
+    "anachronism_penalty": 1.6
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 56.9,
+      "stable_ci": 1.2,
+      "evolving": 48.4,
+      "evolving_ci": 3.6
+     },
+     "apii": {
+      "stable": 71.3,
+      "stable_ci": 1.1,
+      "evolving": 46.1,
+      "evolving_ci": 1.2
+     },
+     "sr": {
+      "stable": 79.1,
+      "stable_ci": 0.7,
+      "evolving": 57.9,
+      "evolving_ci": 0.7
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 54.4,
+      "stable_ci": 1.7,
+      "evolving": 53.2,
+      "evolving_ci": 3.9
+     },
+     "apii": {
+      "stable": 59.8,
+      "stable_ci": 1.4,
+      "evolving": 63.8,
+      "evolving_ci": 2.3
+     },
+     "sr": {
+      "stable": 77.2,
+      "stable_ci": 1.0,
+      "evolving": 75.8,
+      "evolving_ci": 0.9
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 67.0,
+      "stable_ci": 2.3,
+      "evolving": 65.4,
+      "evolving_ci": 4.7
+     },
+     "apii": {
+      "stable": 61.4,
+      "stable_ci": 1.6,
+      "evolving": 50.8,
+      "evolving_ci": 1.4
+     },
+     "sr": {
+      "stable": 70.4,
+      "stable_ci": 1.0,
+      "evolving": 56.2,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 49.7,
+      "correct": 49.7,
+      "invalid": 18.7,
+      "anachronistic": 2.5,
+      "unknown": 27.8
+     },
+     "apii": {
+      "score": 46.1,
+      "correct": 46.1,
+      "invalid": 13.1,
+      "anachronistic": 0.9,
+      "unknown": 39.9
+     },
+     "apic3": {
+      "score": 82.2,
+      "correct": 95.0,
+      "invalid": null,
+      "anachronistic": 0.6,
+      "unknown": 4.4
+     },
+     "sr": {
+      "score": 57.9,
+      "correct": 57.1,
+      "invalid": null,
+      "anachronistic": 9.8,
+      "unknown": 33.1
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 52.6,
+      "correct": 52.6,
+      "invalid": 23.5,
+      "anachronistic": 2.0,
+      "unknown": 21.9
+     },
+     "apii": {
+      "score": 63.8,
+      "correct": 63.8,
+      "invalid": 24.3,
+      "anachronistic": 0.4,
+      "unknown": 11.5
+     },
+     "apic3": {
+      "score": 86.4,
+      "correct": 91.0,
+      "invalid": null,
+      "anachronistic": 2.1,
+      "unknown": 6.9
+     },
+     "sr": {
+      "score": 75.8,
+      "correct": 78.6,
+      "invalid": null,
+      "anachronistic": 7.3,
+      "unknown": 14.1
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 65.4,
+      "correct": 65.4,
+      "invalid": 17.3,
+      "anachronistic": 0.0,
+      "unknown": 13.6
+     },
+     "apii": {
+      "score": 50.8,
+      "correct": 50.8,
+      "invalid": 21.1,
+      "anachronistic": 0.2,
+      "unknown": 27.9
+     },
+     "apic3": {
+      "score": 79.8,
+      "correct": 94.4,
+      "invalid": null,
+      "anachronistic": 1.7,
+      "unknown": 3.9
+     },
+     "sr": {
+      "score": 56.2,
+      "correct": 55.1,
+      "invalid": null,
+      "anachronistic": 9.8,
+      "unknown": 35.0
+     }
+    }
+   }
+  },
+  {
+   "name": "Qwen3.5 35B",
+   "organization": "Alibaba Qwen",
+   "open_weights": true,
+   "seus": {
+    "seus": 52.6,
+    "stable": 63.3,
+    "evolving": 54.7,
+    "retention": 85.9,
+    "stability_penalty": 3.4,
+    "anachronism_penalty": 1.8
+   },
+   "tasks": {
+    "pytorch": {
+     "apic": {
+      "stable": 50.6,
+      "stable_ci": 1.3,
+      "evolving": 40.1,
+      "evolving_ci": 3.5
+     },
+     "apii": {
+      "stable": 59.8,
+      "stable_ci": 1.2,
+      "evolving": 31.9,
+      "evolving_ci": 1.1
+     },
+     "sr": {
+      "stable": 75.3,
+      "stable_ci": 0.7,
+      "evolving": 51.9,
+      "evolving_ci": 0.7
+     }
+    },
+    "numpy": {
+     "apic": {
+      "stable": 47.6,
+      "stable_ci": 1.7,
+      "evolving": 56.0,
+      "evolving_ci": 3.8
+     },
+     "apii": {
+      "stable": 48.2,
+      "stable_ci": 1.5,
+      "evolving": 50.9,
+      "evolving_ci": 2.4
+     },
+     "sr": {
+      "stable": 67.0,
+      "stable_ci": 1.0,
+      "evolving": 68.2,
+      "evolving_ci": 1.0
+     }
+    },
+    "scipy": {
+     "apic": {
+      "stable": 59.9,
+      "stable_ci": 2.5,
+      "evolving": 53.7,
+      "evolving_ci": 5.1
+     },
+     "apii": {
+      "stable": 49.8,
+      "stable_ci": 1.6,
+      "evolving": 36.2,
+      "evolving_ci": 1.3
+     },
+     "sr": {
+      "stable": 56.1,
+      "stable_ci": 1.0,
+      "evolving": 47.8,
+      "evolving_ci": 0.7
+     }
+    }
+   },
+   "errors": {
+    "pytorch": {
+     "apic2": {
+      "score": 40.0,
+      "correct": 40.0,
+      "invalid": 25.8,
+      "anachronistic": 2.1,
+      "unknown": 30.3
+     },
+     "apii": {
+      "score": 31.9,
+      "correct": 31.9,
+      "invalid": 14.4,
+      "anachronistic": 0.8,
+      "unknown": 52.9
+     },
+     "apic3": {
+      "score": 79.5,
+      "correct": 92.3,
+      "invalid": null,
+      "anachronistic": 0.7,
+      "unknown": 7.1
+     },
+     "sr": {
+      "score": 51.9,
+      "correct": 50.5,
+      "invalid": null,
+      "anachronistic": 10.2,
+      "unknown": 39.3
+     }
+    },
+    "numpy": {
+     "apic2": {
+      "score": 57.0,
+      "correct": 57.0,
+      "invalid": 26.9,
+      "anachronistic": 2.5,
+      "unknown": 13.0
+     },
+     "apii": {
+      "score": 50.9,
+      "correct": 50.9,
+      "invalid": 29.2,
+      "anachronistic": 0.2,
+      "unknown": 19.7
+     },
+     "apic3": {
+      "score": 84.7,
+      "correct": 90.2,
+      "invalid": null,
+      "anachronistic": 2.6,
+      "unknown": 7.2
+     },
+     "sr": {
+      "score": 68.2,
+      "correct": 71.8,
+      "invalid": null,
+      "anachronistic": 8.6,
+      "unknown": 19.6
+     }
+    },
+    "scipy": {
+     "apic2": {
+      "score": 52.1,
+      "correct": 52.1,
+      "invalid": 28.3,
+      "anachronistic": 0.0,
+      "unknown": 16.0
+     },
+     "apii": {
+      "score": 36.2,
+      "correct": 36.2,
+      "invalid": 20.6,
+      "anachronistic": 0.3,
+      "unknown": 42.8
+     },
+     "apic3": {
+      "score": 76.7,
+      "correct": 93.0,
+      "invalid": null,
+      "anachronistic": 1.7,
+      "unknown": 5.3
+     },
+     "sr": {
+      "score": 47.8,
+      "correct": 44.5,
+      "invalid": null,
+      "anachronistic": 13.9,
+      "unknown": 41.6
+     }
+    }
+   }
+  }
+ ]
+}

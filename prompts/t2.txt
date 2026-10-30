@@ -1,0 +1,7 @@
+In Python's {lib} library version {version}, is the given API a valid, importable function, class, or attribute? Answer with exactly one word: Yes or No.
+
+Examples:
+{lib} version {version}: `torch.nn.functional.relu` → Yes
+{lib} version {version}: `torch.nn.functional.magic_transform` → No
+
+{lib} version {version}: `{api}` →

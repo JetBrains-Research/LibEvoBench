@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+out/figures/
+
+# Benchmark tables: rebuilt from Hugging Face with scripts/download_data.py
+out/benchmark_db/

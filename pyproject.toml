@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.28.0", "editables>=0.5"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[project]
+name = "libEvoBench"
+version = "0.1.0"
+description = "LibEvoBench eval pipeline"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "altair>=5.5.0",
+    "datasets==4.0.0",
+    "duckdb>=1.4.1",
+    "huggingface-hub>=0.35.3",
+    "marimo>=0.16.5",
+    "openai>=2.2.0",
+    "optuna>=4.5.0",
+    "pandas>=2.3.3",
+    "peft>=0.17.1",
+    "plotly>=6.3.1",
+    "python-dotenv>=1.1.1",
+    "rapidfuzz>=3.14.1",
+    "rich>=14.1.0",
+    "seaborn>=0.13.2",
+    "sqlglot>=27.27.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.57.0",
+    "tyro>=0.9.32",
+    "vllm>=0.11.0; sys_platform == 'linux'",
+    "wandb>=0.22.2",
+    "python-levenshtein>=0.27.3",
+    "ruamel-yaml>=0.19.1",
+    "tenacity>=9.1.4",
+]

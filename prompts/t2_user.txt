@@ -1,0 +1,4 @@
+{lib} library, version {version}.
+API path: {prefix}.___
+Description:
+{doc}

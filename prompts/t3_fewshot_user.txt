@@ -1,0 +1,1 @@
+Write the full function/method signature of `torch.nn.Dropout` as it appears in torch 2.6. Output ONLY the signature line (e.g. `func(a, b, c=None)`), nothing else.
