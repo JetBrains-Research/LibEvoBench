@@ -67,3 +67,6 @@ pre.snippet { white-space: pre; overflow-x: auto; background: var(--soft); margi
 .tldr li:last-child { margin-bottom: 0; }
 .tldr li::before { content: "\27A2"; position: absolute; left: 0; top: 0; color: #2b2b2b; }
 @media (max-width: 600px) { .tldr { padding: 2rem 1rem 1rem; } .tldr li { font-size: 1rem; padding-left: 1.6rem; } }
+
+.tldr-section { padding-top: 1rem; padding-bottom: 0; }
+.tldr-section .tldr { margin-bottom: 0; }

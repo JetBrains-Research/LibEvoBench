@@ -110,6 +110,19 @@
   </div>
 </section>
 
+<section class="section tldr-section">
+  <div class="container is-max-desktop">
+    <div class="tldr">
+      <span class="tldr-label">TL;DR</span>
+      <ul>
+        <li><strong>Even SOTA models lag on version-specific knowledge</strong>: a persistent 5&ndash;10 point gap between stable and evolving APIs that neither scale nor training recency closes.</li>
+        <li><strong>Models don't store the version as a dimension of library knowledge</strong>: giving the target version yields no gain, while giving documentation adds +10&ndash;20 points.</li>
+        <li><strong>Failures are temporal confusion, not fabrication:</strong> models fall back on version-agnostic, high-frequency symbols that hide the gap.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="leaderboard">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Leaderboard</h2>
@@ -165,14 +178,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="tldr">
-      <span class="tldr-label">TL;DR</span>
-      <ul>
-        <li><strong>Even SOTA models lag on version-specific knowledge</strong>: a persistent 5&ndash;10 point gap between stable and evolving APIs that neither scale nor training recency closes.</li>
-        <li><strong>Models don't store the version as a dimension of library knowledge</strong>: giving the target version yields no gain, while giving documentation adds +10&ndash;20 points.</li>
-        <li><strong>Failures are temporal confusion, not fabrication:</strong> models fall back on version-agnostic, high-frequency symbols that hide the gap.</li>
-      </ul>
-    </div>
     <div class="figure-box">
       <img src="static/images/version-decay.png" alt="Three line charts (OpenAI GPT, Sonnet and Gemini, Qwen) of mean score against normalized library version. Dashed stable-API lines stay flat; solid evolving-API lines fall toward the latest versions." class="figure-img">
     </div>
