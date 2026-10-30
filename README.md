@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/static/images/banner.png" alt="LibEvoBench: do code models know an API as it exists in a specific library version?" width="100%">
+<img src="docs/static/images/banner.png" alt="LibEvoBench: Probing Temporal Knowledge Stratification in Code Generation Models" width="100%">
 
 <h3>Probing Temporal Knowledge Stratification in Code Generation Models</h3>
 
